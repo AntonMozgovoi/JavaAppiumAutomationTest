@@ -3,10 +3,10 @@ import org.junit.Test;
 
 public class MainClassTest {
     @Test
-    public void testGetClassNumber()
-    {
-        MainClass Number = new MainClass();
-        int result = Number.getClassNumber();
-        Assert.assertTrue("метод getClassNumber возвращает число не больше 45",result > 45);
+    public void testGetClassString() {
+        MainClass text = new MainClass();
+        String result = text.getClassString();
+        boolean containsHello = result.contains("Hello") || result.contains("hello");
+        Assert.assertTrue("метод getClassString не возвращает строку, в которой есть подстрока “hello” или “Hello”", containsHello);
     }
 }
